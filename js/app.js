@@ -30,7 +30,7 @@ Enemy.prototype.update = function(dt) {
 
     if(this.x + 101*0.8 >= player.x && this.x  <= player.x && this.y + 83*0.2 >= player.y && this.y - 83*0.2 <= player.y) {
         // x & y values adjusted for better collision detection; in general, x-position of Enemy = x-position of Player - 10 for better appearence
-        player.score = 0; // add to player score
+        this.score = 0; // add to player score
         document.getElementById('score').innerHTML = "Score: 0"; // update score upon collision
         document.getElementById('result').innerHTML = "Ouch! Try again"; // update result upon collision
         player.reset();  // return player to starting position
@@ -92,8 +92,8 @@ Player.prototype.handleInput = function(allowedKeys) { // move Player according 
                 this.y -= 83;       // move one cell up,
             } else {
 
-                player.score += 100;  // else: add to score
-                document.getElementById('score').innerHTML = "Your score: " + player.score; // update score upon success
+                this.score += 100;  // else: add to score
+                document.getElementById('score').innerHTML = "Your score: " + this.score; // update score upon success
                 document.getElementById('result').innerHTML = "You made it!"; // update result upon success
 
                 this.reset();  // return player to starting position
