@@ -1,4 +1,4 @@
-#Udacity FEND P3: Classic Arcade Game Clone
+#Classic Arcade Game Clone
 
 ##To play the game:
 
